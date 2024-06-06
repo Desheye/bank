@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/public/css/forgot.css">
+
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+ 
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="forgot-password-container">
+            <h2>Forgot Password</h2>
+            <form id="forgot-password-form" action="/reset-password" method="post">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="btn1">
+                <button type="submit" class="btn btn-warning">Send Reset Link</button>
+                <a href="/" class="back-link">Back to Home Page</a>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

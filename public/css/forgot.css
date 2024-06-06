@@ -1,0 +1,55 @@
+@font-face {
+    font-family:NovaFlat;
+    src: url(/public/Fontz/NovaFlat-Regular.woff2);
+}
+
+.forgot-password-container {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid orange;
+    background-color: rgba(218, 165, 32, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: NovaFlat;
+}
+.forgot-password-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.forgot-password-container .form-group {
+    margin-bottom: 15px;
+}
+.forgot-password-container .form-group label{
+    width: max-content;
+    padding: .5rem;
+    border-radius: .5rem;
+    text-align: center;
+    background-color: orangered;
+    margin-bottom: .5rem;
+}
+.forgot-password-container .btn {
+    width: 45%;
+}
+.forgot-password-container .btn1 {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+form a {
+    text-decoration: none;
+    color: black;
+    padding: .5rem;
+}
+.forgot-password-container .back-link {
+    display: block;
+    text-align: center;
+    background-color: orangered;
+    border-radius: .5rem;
+    width: 45%;
+}

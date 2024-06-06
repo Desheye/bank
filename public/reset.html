@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/public/css/reset.css">
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <title>Reset Password</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="reset">
+            <h1>Reset Password</h1>
+            <form action="/reset-password" method="post">
+                <input type="hidden" name="token" value="<%= token %>">
+                <div class="input">
+                    <label for="password">New Password:</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="input">
+                    <label for="confirmPassword">Confirm New Password:</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" required>
+                </div>
+                <div class="submitBTN">
+                <button type="submit" class="submitBTN">Reset Password</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

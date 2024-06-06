@@ -1,0 +1,169 @@
+.grid-container {
+  width: 700px;
+  height: 500px;
+  border: 1px solid red;
+  display: flex;
+  overflow: hidden;
+  background-color: whitesmoke;
+  box-shadow: 0.2rem 0.1rem 0.2rem coral;
+  position: fixed;
+  top: 55%;
+  right: -80%;
+  transition: right .9s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: 300;
+  /* Center horizontally and vertically */
+  transition: transform;
+  visibility: hidde; }
+
+  .grid-container.visible {
+    right: 0px; /* Slide into view */
+  }
+
+.grid {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden; }
+
+.createAccount, .createAccount2 {
+  width: 50%;
+  transform: translateX(0);
+  transition: transform .5s ease-in-out;
+  overflow: hidden;
+  border-bottom-left-radius: 4rem;
+  box-shadow: 0.4rem 0.4rem 0.2rem #851a2c; }
+
+.createAccount {
+  background-color: pink;
+  width: 100%; }
+
+.createAccount2 {
+  display: flex;
+  flex-direction: column;
+  width: 0; }
+
+.createAccount > header {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem; }
+
+.createAccount > header, h1 {
+  font-family: monospace;
+  font-weight: 800; }
+
+/*** The styling for the social media links facebook and co
+has been jopined with .createAccount2 below***/
+.createAccount > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 2.5rem auto; }
+
+.createAccount > form button {
+  width: 200px;
+  padding: .5rem;
+  margin-top: 1rem;
+  background-color: orange;
+  border: transparent; }
+
+.createAccount > form, button, .btn {
+  font-family: monospace;
+  font-weight: 800; }
+
+/*** SECOND CREATE ACOOUNT ****/
+.createAccount2 > header {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-family: Strait; }
+
+.createAccount2 > header, h1 {
+  font-size: 2rem;
+  text-align: center; }
+
+.createAccount > .nav,
+.createAccount2 > .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  margin: 1.2rem auto; }
+
+.createAccount > .nav li,
+.createAccount2 > .nav li {
+  list-style: none;
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 1.2rem; }
+
+.createAccount > .nav li .bi,
+.createAccount2 > .nav li .bi {
+  font-size: 1.8rem; }
+
+.bi-facebook, .bi-linkedin {
+  color: blue; }
+
+.bi-google {
+  width: 30px; }
+
+.createAccount2 > .paragraph {
+  margin-top: 1.5rem;
+  width: 100%; }
+
+.createAccount2 > .paragraph, p {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center; }
+
+.createAccount2 > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2rem auto; }
+
+  .createAccount > form input,
+  .createAccount2 > form input {
+    width: 100%;
+    font-family: Strait;
+    border: none;
+    margin: .2rem auto;
+    outline: none;
+    padding: .5rem;
+    font-weight: 600;
+    transition: border-bottom-color 0.3s ease;
+    background-color: #efe6d4;
+    border-bottom: 2px solid gray; /* Initial border color */
+  }
+  
+  .createAccount > form input.valid,
+  .createAccount2 > form input.valid {
+    border-bottom-color: green;
+  }
+  
+  .createAccount > form input.invalid,
+  .createAccount2 > form input.invalid {
+    border-bottom-color: red;
+  }
+  
+.createAccount2 > form, span {
+  margin-top: 1rem; }
+
+.createAccount2 > span, a {
+  text-decoration: none;
+  color: black;
+  text-align: center; }
+
+.createAccount2 > form button {
+  margin-top: 1em;
+  width: 200px;
+  border: transparent;
+  background-color: #d94a15; }
+
+.createAccount2 > form, button, #btn {
+  color: #0e0e02;
+  font-size: 1.2rem;
+  padding: .3rem;
+  border-radius: .4rem;
+  font-family: Strait; }

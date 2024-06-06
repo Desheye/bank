@@ -1,0 +1,59 @@
+@font-face {
+    font-family: NovaFlat;
+    src: url(/public/Fontz/NovaFlat-Regular.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.reset{
+    width: 500px;
+    padding: 20px;
+    border: 1px solid lightcoral;
+    background-color: rgba(218, 32, 32, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: NovaFlat;
+    display: flex;
+    flex-direction: column;
+}
+.reset h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgb(221, 181, 105);
+}
+.input{
+   display: flex;
+   justify-content: space-evenly;
+   margin: 1rem 0;
+}
+.input label{
+    width: 40%;
+    color: wheat;
+}
+.input input{
+    width: 50%;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    padding: .7rem;
+}
+.reset .submitBTN{
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+.reset .submitBTN button{
+    text-align: center;
+    width: 50%;
+    height: 50px;
+    background-color: orange;
+    border-radius: .5rem;
+    margin: 1rem 0;
+}

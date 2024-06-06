@@ -1,0 +1,54 @@
+.slideGrid {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Ensure overflow is hidden */
+}
+
+.welcomeBack, .signIn {
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Position them absolutely */
+    width: 100%; /* Occupy the whole width */
+    height: 100%; /* Occupy the whole height */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    transform: translateY(0%); /* Initially, both are visible */
+    transition: transform .5s ease-in-out;
+    border-top-right-radius: 4rem;
+}
+
+.signIn {
+    transform: translateY(100%); /* Initially, this is hidden below */
+}
+.signIn{
+    background-color: orange;
+}
+.welcomeBack{
+    background-color: orangered;
+}
+.welcomeBack header,
+.signIn header{
+    font-family: 'Courier New', Courier, monospace;
+}
+.welcomeBack .paragraph,
+.signIn .paragraph{
+    margin: 1rem;
+}
+.welcomeBack button,
+.signIn button{
+    width: 200px;
+    border: none;
+    outline: transparent;
+    background-color: orange;
+    padding: .4rem;
+    font-weight: 800;
+}
+.signIn button{
+    background-color: orangered;
+}

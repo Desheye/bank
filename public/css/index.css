@@ -1,0 +1,82 @@
+@font-face {
+    font-family: NovaFlat;
+    src: url(../Fontz/NovaFlat-Regular.woff2);
+}
+
+@font-face {
+    font-family:Strait;
+    src: url(../Fontz/Strait-Regular.woff2);
+}
+.container-fluid{
+    background-color: coral;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/woman.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-fluid .navbar {
+    width: 100%; }
+    .container-fluid .navbar .header {
+      font-family: Strait;
+      text-transform: uppercase;
+      font-size: 2rem;
+      color: black;
+    text-shadow: .3rem 3px 3px orange; }
+
+.container-fluid .cover-frame{
+    width: 600px;
+    height: 100vh;
+    background-color: rgba(255, 165, 0, 0.5); /* Orange color with 50% opacity */
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+}
+.container-fluid .cover-frame .logIn{
+    width: 500px;
+    height: 90vh;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+.container-fluid .cover-frame .logIn .caption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.caption h4,
+.caption h3{
+    font-family: Strait;
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.container-fluid .cover-frame .logIn .loginButton{
+    width: auto;
+    margin: 0 auto;
+}
+.container-fluid .cover-frame .logIn .loginButton button {
+    background-color: orangered;
+    color: wheat;
+    padding: .7rem;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    box-shadow: .2rem .2rem wheat;
+    position: relative;
+    z-index: 20;
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.container-fluid .cover-frame .logIn .loginButton button:hover {
+    background-color: rgb(150, 11, 34); /* Change background color on hover */
+}
