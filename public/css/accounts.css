@@ -1,0 +1,88 @@
+
+@font-face {
+    font-family: NovaFlat;
+    src: url(/Fontz/NovaFlat-Regular.woff2);
+}
+@font-face {
+    font-family: NovaSquare;
+    src: url(/Fontz/NovaSquare-Regular.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.account-grid{
+    background-image: url(/img/highrise.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height:100vh;
+    opacity:.9;
+    display: flex;
+}
+.account-grid .leftbar{
+    width: 80px;
+    height: 100%;
+    background-color: rgb(48, 40, 28, .5);
+    font-family: NovaFlat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin: 0 auto; */
+}
+.account-grid .leftbar .icons {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+    height: 90%;
+}
+.account-grid .leftbar .icon-head,
+.account-grid .leftbar .icon-fonts,
+.account-grid .leftbar .settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.account-grid .leftbar .icon-head{
+    margin: 2rem;
+}
+.account-grid .leftbar .settings{
+    margin-top: 8rem;
+}
+.account-grid .leftbar .icon-fonts{
+    margin-top: 2rem;
+    width: 100%;
+    height: fit-content;
+}
+
+.account-grid .leftbar .icon-fonts a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+.account-grid .leftbar .icon-fonts .settings {
+    margin-top: 20px; /* Example margin for spacing */
+}
+.leftbar .icons .icon-head h2 {
+    padding: 5px 0;
+    color: rgb(195, 171, 149);
+}
+.leftbar .bi {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.leftbar .bi:hover {
+    background-color: rgb(45, 28, 12);
+    border-radius: 50px;
+    padding: .5rem;
+    margin: 0 1.5rem;
+    transition: all .3s ease;
+}

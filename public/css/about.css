@@ -1,0 +1,94 @@
+@font-face {
+    font-family: NovaFlat;
+    src: url(/public/Fontz/NovaFlat-Regular.woff2);
+}
+@font-face {
+    font-family: NovaSquare;
+    src: url(/public/Fontz/NovaSquare-Regular.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(233, 217, 176);
+    position: relative;
+    background-image: url(/public/img/building.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(175, 173, 171, .5);
+}
+.wrapper .about-us-grid{
+    width: 80%;
+    height: 600px;
+    background-color: rgb(244, 183, 29, .5);
+    border-radius: .5rem;
+    position: absolute;
+    top: 2%;
+    left:10%;
+}
+.wrapper .about-us-grid header{
+    width: 100%;
+    height: 50px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+.wrapper .about-us-grid header h1{
+    font-family: NovaFlat;
+    font-size: 1.6rem;
+}
+.wrapper .about-us-grid header .dropdown{
+    font-family: NovaFlat;
+    padding: .4rem;
+    border-radius: .5rem;
+    background-color: green;
+    color: wheat;
+    position: relative;
+}
+.wrapper .about-us-grid header .dropdown .btn{
+    color: wheat;
+    font-size: 1rem;
+    width: 120px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: .4rem;
+    outline: none;
+    border: transparent;
+}
+.wrapper .about-us-grid header .dropdown .dropdown-menu{
+    font-family: NovaFlat;
+    padding: .1rem;
+    border-radius: .5rem;
+    background-color: rgb(230, 75, 14, .8);
+}
+
+.wrapper .about-us-grid .about-section{
+    width:90%;
+    height: auto;
+    margin: 0 auto;
+}
+.wrapper .about-us-grid .about-section h3{
+    font-family: NovaSquare;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+.wrapper .about-us-grid .about-section .second{
+    font-family: NovaSquare;
+    text-align: left;
+}
+.wrapper .about-us-grid .about-section .paragraph1{
+    font-family: NovaSquare;
+    font-size:1.2rem;
+    margin-bottom: 1rem;
+}

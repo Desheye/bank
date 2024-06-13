@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Correct paths for CSS files -->
+    <link rel="stylesheet" href="/css/accounts.css" />
+    <link rel="stylesheet" href="/css/account-right.css" />
+    <link rel="stylesheet" href="/css/account-center.css" />
+    <link rel="stylesheet" href="/css/account-modal.css" />
+
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+
+    <title>Bank</title>
+  </head>
+
+  <body>
+    <div class="account-grid">
+      <div class="leftbar">
+        <div class="icons">
+          <div class="icon-head">
+            <h2>swb</h2>
+          </div>
+          <div class="icon-fonts">
+            <a href="/index.html"><i class="bi bi-house-fill"></i></a>
+            <a href="/accounts.html"><i class="bi bi-wallet"></i></a>
+            <a href="/about.html"><i class="bi bi-people"></i></a>
+            <a href="/contact-us.html"><i class="bi bi-headset"></i></a>
+          </div>
+
+          <div class="settings">
+            <a href="#"><i class="bi bi-gear"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="center-grid">
+        <div class="split-screen">
+          <div class="side-a">
+            <div class="navigation">
+              <h2>Dashboard</h2>
+              <div class="nav-icons">
+                <i class="bi bi-sliders"></i>
+                <i class="bi bi-bell"></i>
+              </div>
+            </div>
+            <div class="userProfile">
+              <h6><%= userName %></h6>
+            </div>
+            <div class="bal-grid">
+              <div class="balance">
+                <h2 id="balance">N<%= balance %></h2>
+              </div>
+              <div class="available-bal">
+                available bal: 
+                <h6 id="balance">N<%= balance %></h2>
+                <h5>
+                  current balance :
+                  <h6 id="balance">N<%= balance %></h2>
+                </h5>
+              </div>
+            </div>
+
+            <!-- Button to open modal -->
+            <button class="payment-portal">Make Payment</button>
+
+            <!-- Modal -->
+            <div class="login-container">
+              <div class="form-container">
+                <h2>Sign In</h2>
+                <form action="/transfer" method="POST">
+                  <label for="">sender:  <h6><%= userName %></h6></label>
+                  <input type="hidden" name="senderName" value="<%= userName %>">
+                  <input type="text" name="amount" placeholder="Amount" required>
+                  
+                  <label for="">Receiver: <span id="receiverName"></span></label>
+                  <input type="text" name="receiverAccountNumber" id="accountNumber" placeholder="Enter account number">
+                  <button type="submit">Send</button>
+                </form>
+                
+              </div>
+              <div class="welcome-container">
+                <h2>Welcome to Secure Transfer</h2>
+              </div>
+            </div>
+             <!-- Modal -->
+          </div>
+
+          <div class="side-b">
+            <div class="deposit">
+              <div class="last-deposit">
+                N7,680,15
+                <h6>last deposit</h6>
+              </div>
+              <div class="report">
+                <p class="transaction-report">Frm. Mr Yomi Banjo</p>
+              </div>
+            </div>
+
+            <div class="transfer">
+              <div class="last-transfer">
+                N15,675
+                <h6>last transfer</h6>
+              </div>
+              <div class="report">
+                <p class="transaction-report">Frm. Mr Yomi Banjo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="center-down">
+          <div class="news-container">
+            <div class="news-header">
+              <h1>Be In The Know....</h1>
+            </div>
+            <div class="news-grid">
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightbar">
+        <h2>my card</h2>
+        <div class="card-img"></div>
+        <div class="savings-account">
+          <div class="savings-box">
+            <h5>savings account</h5>
+            <p class="current-balance">N45,000</p>
+          </div>
+
+          <button class="add-card">add card</button>
+        </div>
+
+        <div class="transaction">
+          <p class="transaction-header">
+            <a
+              class="btn"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Transaction
+            </a>
+            <button
+              class="btn"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              View
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <!-- Transactions Section -->
+              <div class="transactions-section">
+                <!-- Default displayed transactions -->
+                <div class="transaction-item">
+                  <div class="profile-picture">
+                    <img
+                      src="/img/whistle.png"
+                      alt="Profile Picture"
+                      style="width: 30px; height: 30px; border-radius: 50%"
+                    />
+                  </div>
+                  <div class="transaction-details">
+                    <div class="name">John Doe</div>
+                    <div class="transaction-info">
+                      <p>Transaction details go here...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="transaction-item">
+                  <div class="profile-picture">
+                    <img
+                      src="/img/whistle.png"
+                      alt="Profile Picture"
+                      style="width: 30px; height: 30px; border-radius: 50%"
+                    />
+                  </div>
+                  <div class="transaction-details">
+                    <div class="name">Jane Smith</div>
+                    <div class="transaction-info">
+                      <p>Transaction details go here...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="transaction-item">
+                  <div class="profile-picture">
+                    <img
+                      src="/img/whistle.png"
+                      alt="Profile Picture"
+                      style="width: 30px; height: 30px; border-radius: 50%"
+                    />
+                  </div>
+                  <div class="transaction-details">
+                    <div class="name">Alice Johnson</div>
+                    <div class="transaction-info">
+                      <p>Transaction details go here...</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Additional transactions hidden by default -->
+                <div class="collapse" id="transactionsCollapse">
+                  <div class="transaction-item d-flex justify-content-between">
+                    <div class="profile-picture">
+                      <img
+                        src="/img/whistle.png"
+                        alt="Profile Picture"
+                        style="width: 50px; height: 50px; border-radius: 50%"
+                      />
+                    </div>
+                    <div class="transaction-details">
+                      <div class="name">Bob Brown</div>
+                      <div class="transaction-info">
+                        <p>Transaction details go here...</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add more transactions as needed -->
+                </div>
+              </div>
+              <!-- View All Section -->
+              <div class="view-all-section">
+                <!-- Default displayed content -->
+                <div class="view-item d-flex justify-content-between">
+                  <span>View All Item 1</span>
+                  <button class="btn btn-primary">View All Transactions</button>
+                </div>
+                <div class="view-item d-flex justify-content-between">
+                  <span>View All Item 2</span>
+                  <button class="btn btn-primary">View All Transactions</button>
+                </div>
+                <div class="view-item d-flex justify-content-between">
+                  <span>View All Item 3</span>
+                  <button class="btn btn-primary">View All Transactions</button>
+                </div>
+                <!-- Additional view-all content hidden by default -->
+                <div class="collapse" id="viewAllCollapse">
+                  <div class="view-item d-flex justify-content-between">
+                    <span>View All Item 4</span>
+                    <button class="btn btn-primary">
+                      View All Transactions
+                    </button>
+                  </div>
+                  <!-- Add more view-all content as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/JS/accounts.js"></script>
+    <script src="/JS/account-modal.js"></script>
+    <script src="/JS/input-validation.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

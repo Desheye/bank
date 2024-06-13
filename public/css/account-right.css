@@ -1,0 +1,102 @@
+@font-face {
+    font-family: NovaFlat;
+    src: url(/Fontz/NovaFlat-Regular.woff2);
+}
+@font-face {
+    font-family: NovaSquare;
+    src: url(/Fontz/NovaSquare-Regular.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: NovaSquare;
+}
+.account-grid .rightbar{
+    width: 25%;
+    height: 100%;
+    background-color: rgba(9, 38, 38, 0.5);
+}
+.account-grid .rightbar h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: .5rem;
+    color: wheat;
+}
+.account-grid .rightbar .card-img{
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(/img/atm.png);
+    background-size: cover;
+    background-position: center;
+}
+.account-grid .rightbar .savings-account{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+    background-color: blue;
+}
+.account-grid .rightbar .savings-account .savings-box{
+    width: 60%;
+    height: 90%;
+    padding: .5rem;
+}
+.account-grid .rightbar .savings-account .savings-box h5{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.account-grid .rightbar .savings-account .savings-box .current-balance{
+    font-size: 1.5rem;
+    color: rgb(10, 239, 10);
+    font-weight: 600;
+    text-align: start;
+    font-family: NovaFlat;
+}
+.account-grid .rightbar .savings-account .add-card{
+    width: 150px;
+    height: fit-content;
+    background-color: lightcoral;
+    text-transform: capitalize;
+}
+
+.account-grid .rightbar .transaction {
+    width: 100%;
+    height: 300px;
+    overflow: hidde;
+    background-color: rgb(170, 229, 209, .7, .5);
+    display: flex; /* Make .transaction a flex container */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-grid .rightbar .transaction .transaction-header {
+    width: 90%;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    font-family: NovaSquare;
+    margin: 0; /* Remove margin to ensure it's centered correctly */
+}
+
+
+.transaction-item .profile-picture img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 1px solid gray;
+    padding: .5rem;
+}
+
+.account-grid .rightbar .transaction .collapse .card {
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    font-family: NovaSquare;
+    margin: 0; /* Remove margin to ensure it's centered correctly */
+}

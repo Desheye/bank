@@ -4,9 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/main.css">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+<!-- Correct paths for CSS files -->
+<link rel="stylesheet" href="/public/css/main.css">
+<link rel="stylesheet" href="/public/css/style.css">
+<link rel="stylesheet" href="/public/css/home.css">
+
+
     
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
@@ -18,7 +25,24 @@
     <div class="container-fluid">
         <nav class="navbar">
             <header class="header mr-lg-3">southwesternlands</header>
+            <div class="navigation">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/accounts">Account</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
+            </div>
            <!------------- <button class="navbar-toggle bg-warning ml-lg-3" id="loginButton" type="button">Login</button> -------------->
+           <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Menu:c>Menu</Menu:c>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Home</a></li>
+              <li><a class="dropdown-item" href="#">Services</a></li>
+              <li><a class="dropdown-item" href="#">About Us</a></li>
+              <li><a class="dropdown-item" href="#">Contact</a></li>
+            </ul>
+          </div>
           </nav>
 
           <div class="cover-frame">
@@ -71,17 +95,15 @@
                         <h1>Create Account!</h1>
                     </header>
                     <form id="signup-form" action="/signup" method="post">
-                        <!-- Add the hidden CSRF token field here -->
                         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                        <input type="text" name="full_name" id="full_name" placeholder="Full Name">
-                        <input type="tel" name="phone" id="phone" placeholder="Phone Number">
-                        <input type="email" name="email" id="email" placeholder="Email Address">
-                        <input type="password" name="password" id="password" placeholder="Password">
-                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
-                        <button class="btn">Sign Up</button>
+                        <input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
+                        <input type="text" id="phone" name="phone" placeholder="Phone" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                    
+                        <button type="submit" id="signupForm">Sign Up</button>
                     </form>
-                    <iframe name="response-iframe" id="response-iframe" style="display:none; width: 100%; height: 200px;"></iframe>
-                    </iframe>
 
                 </section>
 
@@ -93,11 +115,10 @@
 
                     <form id="signin-form" action="/login" method="post">
 
-                        <input type="email" name="email" id="email_address" placeholder="Email Address">
+                        <input type="text" id="account_number" name="account_number" placeholder="Enter your account number">
+                        <input type="password" name="password" id="password" placeholder="Password">
 
-                        <input type="password" name="password" id="password_verify" placeholder="Password">
-
-                        <span><a href="/forgot.html">Forgot Your Password?</a></span>
+                        <span class="span"><a href="/forgot.html">Forgot Your Password?</a></span>
                         <button type="submit" class="btn">Sign In</button>
                     </form>
 
@@ -106,11 +127,15 @@
         </div>
     </div>
 </div>
-<script src="/public/JS/main.js"></script>
-<script src="/public/JS/toggle.js"></script>
-<script src="/public/JS/signup.js"></script>
-<script src="/public/JS/script.js"></script>
-<script src="/public/JS/input-validation.js"></script>
+<script src="/JS/main.js"></script>
+<script src="/JS/toggle.js"></script>
+<script src="/JS/signup.j"></script>
+<script src="/JS/script.js"></script>
+<script src="/JS/input-validation.js"></script>
+<script>
+    // Debug statement for CSRF token in form
+    console.log('CSRF token in form:', document.querySelector('input[name="_csrf"]').value);
+</script>
 <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

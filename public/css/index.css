@@ -17,6 +17,11 @@
     background-size: cover;
 }
 .container-fluid .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
     width: 100%; }
     .container-fluid .navbar .header {
       font-family: Strait;
@@ -25,6 +30,37 @@
       color: black;
     text-shadow: .3rem 3px 3px orange; }
 
+    .container-fluid .navbar .navigation {
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 305;
+    }
+
+    .container-fluid .navbar .navigation li{
+        list-style: none;
+        font-family: NovaFlat;
+        background-color: rgb(81, 55, 7);
+        width: fit-content;
+        padding: .2rem;
+        border-radius: .5rem;
+    }
+    .container-fluid .navbar .navigation li:hover{
+        transform: scale(1.2);
+        transition: all .2 ease-in-out;
+    }
+
+    .container-fluid .navbar .navigation li a{
+        color: rgb(239, 67, 9);
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    .container-fluid .navbar .dropdown {
+    visibility: hidden;
+    }
 .container-fluid .cover-frame{
     width: 600px;
     height: 100vh;

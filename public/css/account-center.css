@@ -1,0 +1,183 @@
+
+
+@font-face {
+    font-family: NovaFlat;
+    src: url(/Fontz/NovaFlat-Regular.woff2);
+}
+@font-face {
+    font-family: Strait;
+    src: url(/Fontz/Strait-Regular.woff2);
+}
+@font-face {
+    font-family: NovaSquare;
+    src: url(/Fontz/NovaSquare-Regular.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: NovaSquare;
+}
+.account-grid .center-grid{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(206, 242, 242, .5);
+}
+.account-grid .center-grid .split-screen{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    gap: 10px;
+}
+.account-grid .center-grid .split-screen .side-a,
+.account-grid .center-grid .split-screen .side-b{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.account-grid .center-grid .split-screen .side-a .navigation{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+.account-grid .center .center-up .split-screen .side-a .navigation h2{
+    font-family: NovaFlat;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.account-grid .center-grid .split-screen .side-a .navigation .nav-icons{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 .2rem;
+}
+.account-grid .center-grid .split-screen .side-a .navigation .nav-icons .bi{
+    color: rgb(50, 35, 5);
+}
+.account-grid .center-grid .split-screen .side-a .userProfile{
+    width: 100%;
+    height: fit-content;
+    margin: .8rem 0;
+}
+.account-grid .center-grid .split-screen .side-a .userProfile h6{
+    text-align: end;
+    padding-right: 1rem;
+    font-weight: 600;
+}
+.account-grid .center-grid .split-screen .side-a .bal-grid{
+    font-weight: 600;
+    width: 80%;
+    height: auto;
+}
+.account-grid .center-grid .split-screen .side-a .balance{
+    font-weight: 600;
+    width: 50%;
+    height: auto;
+}
+.account-grid .center-grid .split-screen .side-a .balance h2{
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.account-grid .center-grid .split-screen .side-a .available-bal h5{
+    font-family: Strait;
+    font-size: 1rem;
+    color: darkblue;
+    font-weight: bold;
+}
+.account-grid .center-grid .split-screen .side-a .available-bal .span{
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(30, 58, 30);
+}
+
+.account-grid .center-grid .split-screen .side-a .payment{
+    width: fit-content;
+    color: wheat;
+    background-color: black;
+    padding: .5rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+}
+
+
+
+/* Side B*/
+
+.account-grid .center-grid .side-b{
+    width: 100%;
+    padding: .5rem;
+}
+.account-grid .center-grid .side-b .deposit{
+    background-color: rgb(246, 221, 225, .5);
+}
+.account-grid .center-grid .side-b .transfer{
+    background-color: rgb(0, 170, 226, .5);
+}
+.account-grid .center-grid .side-b .deposit,
+.account-grid .center-grid .side-b .transfer{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(44, 29, 2);
+    box-shadow: .2rem .2rem rgb(40, 27, 4);
+    margin: 1rem 0;
+    width: 90%;
+    height: 100px;
+}
+
+.account-grid .center-grid .side-b .deposit .last-deposit,
+.account-grid .center-grid .side-b .transfer .last-transfer{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: .3rem;
+}
+.account-grid .center-grid .side-b .deposit .last-deposit h6,
+.account-grid .center-grid .side-b .transfer .last-transfer h6{
+    text-align: center;
+}
+.account-grid .center-grid .side-b .deposit .report,
+.account-grid .center-grid .side-b .transfer .report{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .3rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.account-grid .center-grid .center-down{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+.account-grid .center-grid .center-down .news-container{
+    width: 100%;
+    height: 100%;
+}
+.account-grid .center-grid .center-down .news-container .news-header{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: Strait;
+    font-weight: 700;
+}
+
+.account-grid .center-grid .center-down .news-container .news-header h1{
+    text-align: center;
+    font-family: Strait;
+}
+.account-grid .center-grid .center-down .news-container .news-grid li{
+    font-family: Strait;
+    list-style: none;
+    padding: .3rem;
+    font-family: NovaSquare;
+    font-weight: 600;
+}
