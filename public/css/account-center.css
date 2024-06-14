@@ -67,6 +67,7 @@
     text-align: end;
     padding-right: 1rem;
     font-weight: 600;
+    font-size: 1.3rem;
 }
 .account-grid .center-grid .split-screen .side-a .bal-grid{
     font-weight: 600;
@@ -80,7 +81,7 @@
 }
 .account-grid .center-grid .split-screen .side-a .balance h2{
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
 }
 
@@ -92,7 +93,7 @@
 }
 .account-grid .center-grid .split-screen .side-a .available-bal .span{
     font-family: monospace;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: rgb(30, 58, 30);
 }
@@ -171,4 +172,5 @@
     padding: .3rem;
     font-family: NovaSquare;
     font-weight: 600;
+    color: rgb(110, 64, 3);
 }

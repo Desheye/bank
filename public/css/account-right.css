@@ -39,7 +39,7 @@
     width: 90%;
     height: fit-content;
     margin: 0 auto;
-    background-color: blue;
+    background-color: rgb(102, 88, 6);
 }
 .account-grid .rightbar .savings-account .savings-box{
     width: 60%;
@@ -52,7 +52,7 @@
 }
 .account-grid .rightbar .savings-account .savings-box .current-balance{
     font-size: 1.5rem;
-    color: rgb(10, 239, 10);
+    color: wheat;
     font-weight: 600;
     text-align: start;
     font-family: NovaFlat;
@@ -60,7 +60,7 @@
 .account-grid .rightbar .savings-account .add-card{
     width: 150px;
     height: fit-content;
-    background-color: lightcoral;
+    background-color: rgb(255, 17, 17);
     text-transform: capitalize;
 }
 

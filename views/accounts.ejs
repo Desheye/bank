@@ -78,8 +78,7 @@
                 <form action="/transfer" method="POST">
                   <label for="">sender:  <h6><%= userName %></h6></label>
                   <input type="hidden" name="receiverAccountNumber" id="finalReceiverAccountNumber">
-                  <label for="amount">Amount:</label>
-                  <input type="" id="amount" name="amount" required>
+                  <input type="" id="amount" name="amount" required style="padding: 1rem;">
                   <button type="submit">Send Money</button>
                 </form>
 
@@ -87,7 +86,7 @@
                 <form id="receiverForm">
                   <label for="accountNumber">Receiver Acc:</label>
                   <input type="text" id="accountNumber" name="receiverAccountNumber" placeholder="Enter account number" required>
-                  <button type="button" id="fetchReceiverName">Fetch Receiver Name</button>
+                 <button type="button" id="fetchReceiverName">Fetch Receiver Name</button> 
                 
                 </form>
 
@@ -157,128 +156,6 @@
 
 
           <button class="add-card">add card</button>
-        </div>
-
-        <div class="transaction">
-          <p class="transaction-header">
-            <a
-              class="btn"
-              href="#collapseExample"
-              role="button"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              Transaction
-            </a>
-            <button
-              class="btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseExample"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              View
-            </button>
-          </p>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-              <!-- Transactions Section -->
-              <div class="transactions-section">
-                <!-- Default displayed transactions -->
-                <div class="transaction-item">
-                  <div class="profile-picture">
-                    <img
-                      src="/img/whistle.png"
-                      alt="Profile Picture"
-                      style="width: 30px; height: 30px; border-radius: 50%"
-                    />
-                  </div>
-                  <div class="transaction-details">
-                    <div class="name">John Doe</div>
-                    <div class="transaction-info">
-                      <p>Transaction details go here...</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="transaction-item">
-                  <div class="profile-picture">
-                    <img
-                      src="/img/whistle.png"
-                      alt="Profile Picture"
-                      style="width: 30px; height: 30px; border-radius: 50%"
-                    />
-                  </div>
-                  <div class="transaction-details">
-                    <div class="name">Jane Smith</div>
-                    <div class="transaction-info">
-                      <p>Transaction details go here...</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="transaction-item">
-                  <div class="profile-picture">
-                    <img
-                      src="/img/whistle.png"
-                      alt="Profile Picture"
-                      style="width: 30px; height: 30px; border-radius: 50%"
-                    />
-                  </div>
-                  <div class="transaction-details">
-                    <div class="name">Alice Johnson</div>
-                    <div class="transaction-info">
-                      <p>Transaction details go here...</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Additional transactions hidden by default -->
-                <div class="collapse" id="transactionsCollapse">
-                  <div class="transaction-item d-flex justify-content-between">
-                    <div class="profile-picture">
-                      <img
-                        src="/img/whistle.png"
-                        alt="Profile Picture"
-                        style="width: 50px; height: 50px; border-radius: 50%"
-                      />
-                    </div>
-                    <div class="transaction-details">
-                      <div class="name">Bob Brown</div>
-                      <div class="transaction-info">
-                        <p>Transaction details go here...</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Add more transactions as needed -->
-                </div>
-              </div>
-              <!-- View All Section -->
-              <div class="view-all-section">
-                <!-- Default displayed content -->
-                <div class="view-item d-flex justify-content-between">
-                  <span>View All Item 1</span>
-                  <button class="btn btn-primary">View All Transactions</button>
-                </div>
-                <div class="view-item d-flex justify-content-between">
-                  <span>View All Item 2</span>
-                  <button class="btn btn-primary">View All Transactions</button>
-                </div>
-                <div class="view-item d-flex justify-content-between">
-                  <span>View All Item 3</span>
-                  <button class="btn btn-primary">View All Transactions</button>
-                </div>
-                <!-- Additional view-all content hidden by default -->
-                <div class="collapse" id="viewAllCollapse">
-                  <div class="view-item d-flex justify-content-between">
-                    <span>View All Item 4</span>
-                    <button class="btn btn-primary">
-                      View All Transactions
-                    </button>
-                  </div>
-                  <!-- Add more view-all content as needed -->
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

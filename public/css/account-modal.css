@@ -9,7 +9,7 @@ body {
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
   position: absolute;
-  top: 18.5rem;
+  top: 21rem;
   left: 5.5rem;
   z-index: 100;
   width: 480px; /* Set a fixed width */
@@ -34,6 +34,7 @@ body {
 }
 .welcome-container h2{
   width: 100px;
+  text-align: center;
 }
 
 input[type=text], input[type=password] {
@@ -48,8 +49,8 @@ input[type=text], input[type=password] {
 button {
   background-color: lightblue;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: .5rem;
+  margin: 0px 0;
   border: none;
   cursor: pointer;
   width: 200px;
@@ -60,11 +61,17 @@ button {
 
 button:hover {
   opacity:1;
+  transition: all .2s ease-in-out;
 }
 form button{
   height: fit-content;
-  background-color: orange;
+  background-color: goldenrod;
   width: auto;
   padding: .5rem;
   font-size: .9rem;
+}
+form input{
+  height: 20px;
+  width: 100%;
+  margin-bottom: .3rem;
 }

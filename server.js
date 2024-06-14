@@ -1,5 +1,3 @@
-// server.js
-
 const express = require('express');
 const path = require('path');
 const bcrypt = require('bcrypt');
@@ -13,7 +11,7 @@ require('dotenv').config();
 
 const app = express();
 
-//set up API coonection
+// Set up API connection
 const NEWS_API_KEY = process.env.NEWS_API_KEY; // Store your API key in an environment variable
 
 app.get('/financial-news', async (req, res) => {
@@ -32,7 +30,6 @@ app.get('/financial-news', async (req, res) => {
         res.status(500).send('Error fetching news');
     }
 });
-
 
 // Set up express-session
 app.use(session({
@@ -68,7 +65,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-
 // Define the /accounts route
 app.get('/accounts', (req, res) => {
   console.log('Accounts Route - Hit');
@@ -83,20 +79,23 @@ app.get('/accounts', (req, res) => {
   const depositAmount = req.query.depositAmount;
   const depositorName = req.query.depositorName;
 
-  res.render('accounts', { 
-    userName: req.session.userName || userName, 
-    balance: req.session.balance || balance, 
-    successfulTransfer, 
-    transferAmount, 
-    senderName, 
-    receiverName, 
-    depositAmount, 
-    depositorName 
+  res.render('accounts', {
+    userName: req.session.userName || userName,
+    balance: req.session.balance || balance,
+    successfulTransfer,
+    transferAmount,
+    senderName,
+    receiverName,
+    depositAmount,
+    depositorName
   });
 });
 
-
-
+// Define the /welcome route
+app.get('/welcome', (req, res) => {
+  const { userName, accountNumber } = req.query;
+  res.render('welcome', { userName, accountNumber });
+});
 
 // Start the server
 const PORT = process.env.PORT || 3000;
