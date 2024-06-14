@@ -4,25 +4,36 @@ body {
 
 .login-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
+  position: absolute;
+  top: 18.5rem;
+  left: 5.5rem;
+  z-index: 100;
+  width: 480px; /* Set a fixed width */
+  height: 350px; /* Set a fixed height */
 }
+
 .login-container.open {
-  max-height: 500px; /* Adjust the height as needed */
+  max-height: 450px;
 }
 
 .form-container {
   border: 1px solid #f2f2f2;
-  padding: 16px;
+  padding: 20px;
   width: 50%;
+  background-color: rgb(20, 170, 220);
 }
 
 .welcome-container {
   background-color: #f2f2f2;
   padding: 16px;
   width: 50%;
+}
+.welcome-container h2{
+  width: 100px;
 }
 
 input[type=text], input[type=password] {
@@ -41,11 +52,19 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 200px;
   opacity: 0.9;
   color: black;
+  position: relative;
 }
 
 button:hover {
   opacity:1;
+}
+form button{
+  height: fit-content;
+  background-color: orange;
+  width: auto;
+  padding: .5rem;
+  font-size: .9rem;
 }

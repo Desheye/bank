@@ -25,7 +25,7 @@
 }
 .account-grid .center-grid .split-screen{
     width: 100%;
-    height: auto;
+    height: 30%;
     display: flex;
     justify-content: space-between;
     padding: .5rem;
@@ -97,15 +97,6 @@
     color: rgb(30, 58, 30);
 }
 
-.account-grid .center-grid .split-screen .side-a .payment{
-    width: fit-content;
-    color: wheat;
-    background-color: black;
-    padding: .5rem;
-    border-radius: .5rem;
-    text-transform: capitalize;
-}
-
 
 
 /* Side B*/
@@ -156,7 +147,7 @@
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin-top: 2rem;
+    margin-top: 6rem;
 }
 .account-grid .center-grid .center-down .news-container{
     width: 100%;

@@ -59,13 +59,14 @@
               </div>
               <div class="available-bal">
                 available bal: 
-                <h6 id="balance">N<%= balance %></h2>
+                <h6 id="availableBalance">N<%= balance %></h6>
                 <h5>
                   current balance :
-                  <h6 id="balance">N<%= balance %></h2>
+                  <h6 id="currentBalance">N<%= balance %></h6>
                 </h5>
               </div>
             </div>
+            
 
             <!-- Button to open modal -->
             <button class="payment-portal">Make Payment</button>
@@ -76,17 +77,29 @@
                 <h2>Sign In</h2>
                 <form action="/transfer" method="POST">
                   <label for="">sender:  <h6><%= userName %></h6></label>
-                  <input type="hidden" name="senderName" value="<%= userName %>">
-                  <input type="text" name="amount" placeholder="Amount" required>
-                  
-                  <label for="">Receiver: <span id="receiverName"></span></label>
-                  <input type="text" name="receiverAccountNumber" id="accountNumber" placeholder="Enter account number">
-                  <button type="submit">Send</button>
+                  <input type="hidden" name="receiverAccountNumber" id="finalReceiverAccountNumber">
+                  <label for="amount">Amount:</label>
+                  <input type="" id="amount" name="amount" required>
+                  <button type="submit">Send Money</button>
                 </form>
+
+
+                <form id="receiverForm">
+                  <label for="accountNumber">Receiver Acc:</label>
+                  <input type="text" id="accountNumber" name="receiverAccountNumber" placeholder="Enter account number" required>
+                  <button type="button" id="fetchReceiverName">Fetch Receiver Name</button>
                 
+                </form>
+
+
               </div>
               <div class="welcome-container">
-                <h2>Welcome to Secure Transfer</h2>
+                <h2>Secure Transfer</h2>
+                <% if (successfulTransfer) { %>
+                  <p>Transfer of <%= transferAmount %> from <%= senderName %> to <%= receiverName %> was successful.</p>
+                <% } else { %>
+                  <p>No transfer has been made yet.</p>
+                <% } %>
               </div>
             </div>
              <!-- Modal -->
@@ -95,21 +108,21 @@
           <div class="side-b">
             <div class="deposit">
               <div class="last-deposit">
-                N7,680,15
+                N<%= depositAmount || '0' %>
                 <h6>last deposit</h6>
               </div>
               <div class="report">
-                <p class="transaction-report">Frm. Mr Yomi Banjo</p>
+                <p class="transaction-report">Frm: <%= depositorName || 'No recent deposit' %></p>
               </div>
             </div>
 
             <div class="transfer">
               <div class="last-transfer">
-                N15,675
+                N<%= transferAmount || '0' %>
                 <h6>last transfer</h6>
               </div>
               <div class="report">
-                <p class="transaction-report">Frm. Mr Yomi Banjo</p>
+                <p class="transaction-report">To: <%= receiverName || 'No recent transaction' %></p>
               </div>
             </div>
           </div>
@@ -121,15 +134,13 @@
               <h1>Be In The Know....</h1>
             </div>
             <div class="news-grid">
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Lorem, ipsum dolor.</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
             </div>
           </div>
         </div>
@@ -141,8 +152,9 @@
         <div class="savings-account">
           <div class="savings-box">
             <h5>savings account</h5>
-            <p class="current-balance">N45,000</p>
+            <p class="current-balance"><%= balance %></p>
           </div>
+
 
           <button class="add-card">add card</button>
         </div>
